@@ -5,7 +5,7 @@ const PORT = 8000
 
 app.use(cors())
 
-const players = {
+const player = {
     'Ronaldo': {
         'age': 37,
         'birthName': 'Cristiano Ronaldo dos Santos Aveiro',
@@ -46,10 +46,10 @@ app.get('/', (request, response)=>{
 app.get('/api/:name',(request,response)=>{
     const playerName = request.params.name.toLowerCase()
 
-    if( players[playerName] ){
-        response.json(players[playerName])
+    if( player[playerName] ){
+        response.json(player[playerName])
     }else{
-        response.json(players['unknown'])
+        response.json(player['unknown'])
     }
     
 })
