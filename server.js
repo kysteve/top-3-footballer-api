@@ -57,6 +57,9 @@ const player = {
 }
 app.get('/', (request, response)=>{
     response.sendFile(__dirname + '/index.html')
+    response.sendFile(__dirname + '/js/main.js')
+    response.sendFile(__dirname + '/css/style.css')
+    response.sendFile(__dirname + '/css/normalize.css')
 })
 
 app.get('/api/:name',(request,response)=>{
